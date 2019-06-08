@@ -27,7 +27,7 @@ def save_data_list(inpath, outpath, filenames):
         cnt = 0
         images = np.ndarray(shape=(len(filenames), size, size, 3), dtype=np.uint8)
         for idx, key in enumerate(filenames):
-            f_name = '%s/%s' % (inpath, key)
+            f_name = '%s/%s.png' % (inpath, key)
             img = get_image(f_name, LOAD_SIZE, is_crop=False)
             img = img.astype('uint8')
 
